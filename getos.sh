@@ -48,7 +48,13 @@ shopt -s extglob
 
 # exists on debian and ubuntu
 if [ -e /etc/debian_version ]
-then
+then 
+  if [ ! "$(command -v lsb_release)" ];
+  then
+    echo "${0} lsb_release package not installed but is required"
+    exit 1
+  fi
+
   DISTRO=`lsb_release -s -i`
   VERSION=`lsb_release -s -r`
   FULLDISTRO=$(lsb_release -s -d)
