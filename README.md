@@ -6,6 +6,11 @@ An implementation of a DSA SDK and Broker written in C.
 
 # Building
 
+## OS support
+
+* Ubuntu 12,16,18
+* Debian 8
+
 ## Requirements
 
 - CMake v3.0+

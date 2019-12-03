@@ -38,7 +38,7 @@ json_t *broker_config_gen() {
         {
             json_object_set_new_nocheck(http, "enabled", json_true());
             json_object_set_new_nocheck(http, "host", json_string_nocheck("0.0.0.0"));
-            json_object_set_new_nocheck(http, "port", json_integer(8100));
+            json_object_set_new_nocheck(http, "port", json_integer(8080));
         }
     }
     json_t *https = json_object();
@@ -52,11 +52,11 @@ json_t *broker_config_gen() {
         }
 
         {
-            json_object_set_new_nocheck(https, "enabled", json_true());
-            json_object_set_new_nocheck(https, "host", json_string_nocheck("0.0.0.0"));
-            json_object_set_new_nocheck(https, "port", json_integer(8463));
-            json_object_set_new_nocheck(https, "certName", json_string_nocheck("server.pem"));
-            json_object_set_new_nocheck(https, "certKeyName", json_string_nocheck("key.pem"));
+            //json_object_set_new_nocheck(https, "enabled", json_true());
+            //json_object_set_new_nocheck(https, "host", json_string_nocheck("0.0.0.0"));
+            //json_object_set_new_nocheck(https, "port", json_integer(8463));
+            //json_object_set_new_nocheck(https, "certName", json_string_nocheck("server.pem"));
+            //json_object_set_new_nocheck(https, "certKeyName", json_string_nocheck("key.pem"));
 
         }
     }
